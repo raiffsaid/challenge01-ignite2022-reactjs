@@ -1,3 +1,7 @@
+.wrapper {
+  width: 46rem;
+}
+
 .wrapper form {
   display: flex;
   align-items: center;
@@ -5,7 +9,6 @@
   margin: -1.875rem auto 0;
 
   gap: 8px;
-  width: 46rem;
 }
 
 .wrapper input {
@@ -17,7 +20,7 @@
   border: 1px solid var(--gray-700);
   border-radius: 8px;
 
-  width: 85%;
+  width: 100%;
 }
 
 .wrapper button[type=submit] {
@@ -35,12 +38,17 @@
 
   color: var(--gray-100);
 
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
 .wrapper button[type=submit]:hover {
   background-color: var(--blue);
   cursor: pointer;
+}
+
+.wrapper button[type=submit]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

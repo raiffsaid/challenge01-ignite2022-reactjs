@@ -1,13 +1,6 @@
 .container {
   margin: auto;
-}
-
-.listContainer {
-  margin-top: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--gray-100);
+  width: 46rem;
 }
 
 @media (max-width: 768px) {
