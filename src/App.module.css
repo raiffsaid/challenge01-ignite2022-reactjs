@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+}
+
+.listContainer {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-100);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
