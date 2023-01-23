@@ -1,12 +1,12 @@
 import './global.css';
 import styles from './App.module.css';
-import { Header } from './Header';
-import { InputArea } from './InputArea';
-import { TaskArea } from './TaskArea';
+import { Header } from './components/Header';
+import { InputArea } from './components/InputArea';
+import { TaskArea } from './components/TaskArea';
 import { useState } from 'react';
 
 function App() {
-  const [tasks, setTasks] = useState(0);
+  const [tasks, setTasks] = useState<string[]>([]);
   const [finishedTasks, setFinishedTasks] = useState(0);
 
   return (
@@ -17,7 +17,7 @@ function App() {
         <div className={styles.container}>
           <InputArea tasks={tasks} setTasks={setTasks} />
 
-          <TaskArea tasks={tasks} />
+          <TaskArea tasks={tasks} setTasks={setTasks} finishedTasks={finishedTasks} />
         </div>
       </main>
     </>

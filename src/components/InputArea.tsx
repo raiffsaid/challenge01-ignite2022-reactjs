@@ -1,10 +1,10 @@
 import styles from './InputArea.module.css';
-import buttonImg from './assets/plus.svg';
+import buttonImg from '../assets/plus.svg';
 import { ChangeEvent, FormEvent, InputHTMLAttributes, useState } from 'react';
 
 interface InputAreaProps {
-  tasks: number;
-  setTasks(task: number): void;
+  tasks: string[];
+  setTasks(task: string[]): void;
 }
 
 export function InputArea({ tasks, setTasks }: InputAreaProps) {
@@ -15,8 +15,7 @@ export function InputArea({ tasks, setTasks }: InputAreaProps) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`Tarefa ${titleText} criada`);
-    setTasks(tasks + 1);
+    setTasks([...tasks, titleText]);
     setTitleText('');
   }
 
