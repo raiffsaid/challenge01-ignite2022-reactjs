@@ -11,6 +11,51 @@
   border-color: var(--gray-400);
 }
 
+.taskItem input[type=checkbox] {
+  display: grid;
+  place-content: center;
+
+  appearance: none;
+  background-color: var(--gray-400);
+  margin: 0;
+  font: inherit;
+  width: 1.10rem;
+  height: 1.10rem;
+  border: 0.1rem solid var(--blue);
+  border-radius: 1rem;
+
+  box-shadow: 0 0 0 0;
+}
+
+.taskItem input[type=checkbox]:checked {
+  background-color: var(--purple-dark);
+  border: 0.1rem solid var(--purple-dark);
+}
+
+.taskItem input[type=checkbox]:checked:hover {
+  background-color: var(--purple);
+  border: 0.1rem solid var(--purple);
+}
+
+.taskItem input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  box-shadow: inset 1em 1em var(--gray-100);
+
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.taskItem input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.taskItem input[type=checkbox]:hover {
+  border: 0.1rem solid var(--blue-dark);
+  background-color: var(--blue-dark-with-alpha);
+}
+
 .taskItem p {
   color: var(--gray-100);
 }

@@ -11,6 +11,7 @@
   --purple-dark: #5e60ce;
   --blue: #4ea8de;
   --blue-dark: #1e6f9f;
+  --blue-dark-with-alpha:#1e6f9f80; 
   
   --danger: #e25858;
 }
