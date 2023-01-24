@@ -17,11 +17,13 @@ export function InputArea({ tasks, setTasks }: InputAreaProps) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     setTasks([...tasks, {
       id: uuidv4(),
       title: titleText,
       isComplete: false
     }]);
+
     setTitleText('');
   }
 

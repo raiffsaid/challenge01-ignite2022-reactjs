@@ -2,8 +2,6 @@ import styles from './TaskArea.module.css';
 import clipboardImg from '../assets/Clipboard.svg';
 import { Task } from './Task';
 import { ITask } from '../App';
-import { useState } from 'react';
-
 interface TaskAreaProps {
   tasks: {
     id: string;
@@ -14,7 +12,7 @@ interface TaskAreaProps {
 }
 
 export function TaskArea({ tasks, setTasks }: TaskAreaProps) {
-  const [finishedTasks, setFinishedTasks] = useState(0);
+  const finishedTasks = tasks.filter(task => task.isComplete);
 
   function deleteTask(taskToDeleteId: string) {
     const tasksWithoutDeletedOne = tasks.filter(task => (task.id !== taskToDeleteId));
@@ -32,8 +30,6 @@ export function TaskArea({ tasks, setTasks }: TaskAreaProps) {
       isComplete: !newTaskList[newTaskComplete].isComplete
     };
 
-    newTaskList[newTaskComplete].isComplete ? (setFinishedTasks((state) => (state + 1))) : (setFinishedTasks((state) => (state - 1)));
-
     setTasks(newTaskList);
   }
 
@@ -41,7 +37,7 @@ export function TaskArea({ tasks, setTasks }: TaskAreaProps) {
     <>
       <div className={styles.listContainer}>
         <span>Tarefas criadas <span>{tasks.length}</span></span>
-        <span>Concluídas <span>{tasks.length > 0 ? (`${finishedTasks} de ${tasks.length}`) : (finishedTasks)}</span></span>
+        <span>Concluídas <span>{tasks.length > 0 ? (`${finishedTasks.length} de ${tasks.length}`) : (finishedTasks.length)}</span></span>
       </div>
 
       {tasks.length > 0 ? 
@@ -51,8 +47,6 @@ export function TaskArea({ tasks, setTasks }: TaskAreaProps) {
             task={task}
             onDeleteTask={deleteTask}
             onCompleteTask={completeTask}
-            finishedTasks={finishedTasks}
-            setFinishedTasks={setFinishedTasks}
           />
         ))) 
         : 

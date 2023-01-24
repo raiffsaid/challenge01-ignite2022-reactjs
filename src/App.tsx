@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import { Header } from './components/Header';
 import { InputArea } from './components/InputArea';
 import { TaskArea } from './components/TaskArea';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export interface ITask {
     id: string;
@@ -13,9 +13,18 @@ export interface ITask {
 
 function App() {
   const [tasks, setTasks] = useState<ITask[]>([]);
+  const storageTasks = localStorage.getItem('tasks');
+
+  useEffect(() => {
+    if (storageTasks) setTasks(JSON.parse(storageTasks));
+  }, []);
+
+  useEffect(() => {
+    if (tasks) localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <Header />
 
       <main>
@@ -25,7 +34,7 @@ function App() {
           <TaskArea tasks={tasks} setTasks={setTasks} />
         </div>
       </main>
-    </>
+    </div>
   )
 }
 

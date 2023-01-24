@@ -7,26 +7,20 @@ interface TaskProps {
   task: ITask;
   onDeleteTask: (task: string) => void;
   onCompleteTask: (task: ITask) => void;
-  finishedTasks: number;
-  setFinishedTasks(task: number): void;
 }
 
-export function Task({ task, onDeleteTask, onCompleteTask, setFinishedTasks, finishedTasks }: TaskProps) {
-  const [isChecked, setIsChecked] = useState(false);
-
+export function Task({ task, onDeleteTask, onCompleteTask }: TaskProps) {
   function handleDeleteTask() {
     onDeleteTask(task.id);
-    if (isChecked) setFinishedTasks(finishedTasks - 1);
   }
 
   function handleCompleteTask() {
-    setIsChecked(!isChecked);
     onCompleteTask(task);
   }
 
   return (
     <div className={styles.taskItem}>
-      <input type="checkbox" name="" id="" checked={isChecked} onChange={handleCompleteTask} />
+      <input type="checkbox" checked={task.isComplete} onChange={handleCompleteTask} />
       
       {task.isComplete ? (<p id={styles.taskCompleted}>{task.title}</p>) : (<p>{task.title}</p>)}
       

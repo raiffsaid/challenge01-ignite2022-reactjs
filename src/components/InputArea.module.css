@@ -56,11 +56,7 @@
     font-size: 87.5%;
   }
 
-  .wrapper {
-    grid-template-columns: 1fr;
-  }
-
   .wrapper form {
-    flex-direction: column;
+    width: 75%;
   }
 }
