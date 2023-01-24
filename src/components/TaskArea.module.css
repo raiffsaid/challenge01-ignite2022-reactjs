@@ -3,23 +3,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  color: var(--gray-100);
 }
 
-span {
-  color: var(--purple);
-}
-
-span:first-child {
+.listContainer span {
   color: var(--blue);
 }
 
-.span {
+.listContainer span:nth-child(2) {
+  color: var(--purple);
+}
+
+.listContainer span span {
   margin-left: 0.5rem;
   padding: 2px 8px 2px 8px;
-  color: var(--gray-200) !important;
+  color: var(--gray-200);
   background-color: var(--gray-400);
-  border-radius: 100%;
+  border-radius: 20px;
+  font-weight: 700;
 }
 
 .taskContainer {
@@ -42,12 +42,17 @@ span:first-child {
   gap: 0.2rem;
 }
 
-p:first-child {
+.emptyTaskContainer p:first-of-type {
   margin-top: 1rem;
   color: var(--gray-300);
   font-weight: 700;
 }
 
-p:last-child {
+.emptyTaskContainer p + p {
   color: var(--gray-300);
+}
+
+input[type=checkbox] {
+  color: var(--blue);
+  border-radius: 100%;
 }

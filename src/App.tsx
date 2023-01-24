@@ -5,9 +5,14 @@ import { InputArea } from './components/InputArea';
 import { TaskArea } from './components/TaskArea';
 import { useState } from 'react';
 
+export interface ITask {
+    id: string;
+    title: string;
+    isComplete: boolean;
+}
+
 function App() {
-  const [tasks, setTasks] = useState<string[]>([]);
-  const [finishedTasks, setFinishedTasks] = useState(0);
+  const [tasks, setTasks] = useState<ITask[]>([]);
 
   return (
     <>
@@ -17,7 +22,7 @@ function App() {
         <div className={styles.container}>
           <InputArea tasks={tasks} setTasks={setTasks} />
 
-          <TaskArea tasks={tasks} setTasks={setTasks} finishedTasks={finishedTasks} />
+          <TaskArea tasks={tasks} setTasks={setTasks} />
         </div>
       </main>
     </>

@@ -1,10 +1,12 @@
 import styles from './InputArea.module.css';
 import buttonImg from '../assets/plus.svg';
 import { ChangeEvent, FormEvent, InputHTMLAttributes, useState } from 'react';
+import { ITask } from '../App';
+import { v4 as uuidv4 } from 'uuid';
 
 interface InputAreaProps {
-  tasks: string[];
-  setTasks(task: string[]): void;
+  tasks: ITask[];
+  setTasks(task: {}): void;
 }
 
 export function InputArea({ tasks, setTasks }: InputAreaProps) {
@@ -15,7 +17,11 @@ export function InputArea({ tasks, setTasks }: InputAreaProps) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setTasks([...tasks, titleText]);
+    setTasks([...tasks, {
+      id: uuidv4(),
+      title: titleText,
+      isComplete: false
+    }]);
     setTitleText('');
   }
 

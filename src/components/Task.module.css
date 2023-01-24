@@ -27,3 +27,8 @@
 .taskItem button:hover {
   color: var(--danger);
 }
+
+#taskCompleted {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
