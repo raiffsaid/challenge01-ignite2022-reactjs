@@ -57,12 +57,21 @@ input[type=checkbox] {
   border-radius: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
   .listContainer,
   .taskContainer {
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 90%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .listContainer,
+  .taskContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
 
   .taskContainer {

@@ -51,7 +51,14 @@
   cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
+  .wrapper {
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
   html {
     font-size: 87.5%;
   }
@@ -61,6 +68,6 @@
   }
 
   .wrapper form {
-    width: 75%;
+    width: 85%;
   }
 }

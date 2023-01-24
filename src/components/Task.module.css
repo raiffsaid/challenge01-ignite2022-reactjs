@@ -33,10 +33,18 @@
   text-decoration: line-through;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 321px) {
   .taskItem {
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 90%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .taskItem {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
 }
