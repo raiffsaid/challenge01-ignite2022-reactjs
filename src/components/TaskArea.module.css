@@ -73,8 +73,4 @@ input[type=checkbox] {
     margin-right: auto;
     width: 85%;
   }
-
-  .taskContainer {
-    box-shadow: 0 -2px 0 -1px var(--gray-400);
-  }
 }
