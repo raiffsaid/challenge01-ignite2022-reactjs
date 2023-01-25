@@ -1,5 +1,5 @@
 import styles from './TaskArea.module.css';
-import clipboardImg from '../assets/Clipboard.svg';
+import clipboardImg from '../assets/clipboard.svg';
 import { Task } from './Task';
 import { ITask } from '../App';
 interface TaskAreaProps {
