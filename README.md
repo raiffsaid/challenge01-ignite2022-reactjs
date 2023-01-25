@@ -6,6 +6,12 @@
 </div>
 
 <p align="center">
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/raiffsaid/challenge01-ignite2022-reactjs?style=flat-square" />
+  <img alt="License" src="https://img.shields.io/github/license/raiffsaid/challenge01-ignite2022-reactjs?style=flat-square" />
+  <img alt="Website" src="https://img.shields.io/website?style=flat-square&up_message=Online&url=https%3A%2F%2Ftodolist-reactjs-raiffsaid.vercel.app%2F" />
+</p>
+
+<p align="center">
  <a href="#about-the-project">About The Project</a> •
  <a href="#built-with">Built With</a> • 
  <a href="#prerequisites">Prerequisites</a> • 
@@ -22,8 +28,6 @@
 <h2 align="center">
     <img height="375" alt="Challenge 01 - ReactJS 2022" src="images/banner.jpg">
 </h2>
-
-<br/>
 
 <h3 align="center">Mobile</h3>
 <h2 align="center">
@@ -77,9 +81,12 @@ You will need yarn installed on your machine to run the project, to do so you ca
 Distributed under the MIT License. See [LICENSE][license] for more information.
 
 
+## 
+
+
 ## Author
 
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/28994297?s=400&u=8257d240f1ad1a105abe224ff1e131a9f0f872e6&v=4" width="100px;" alt=""/>
+ <img src="https://avatars.githubusercontent.com/u/28994297?s=400&u=8257d240f1ad1a105abe224ff1e131a9f0f872e6&v=4" width="100px;" />
 
  <sub><b>Raiff Said</b></sub>
 
@@ -107,3 +114,5 @@ Distributed under the MIT License. See [LICENSE][license] for more information.
 
 [Yarn]: https://img.shields.io/badge/Yarn-20232A?style=for-the-badge&logo=yarn&logoColor=2C8EBB
 [Yarn-url]: https://yarnpkg.com/
+
+[License-Badge]: https://img.shields.io/github/license/raiffsaid/challenge01-ignite2022-reactjs?style=flat-square
