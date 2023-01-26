@@ -26,12 +26,12 @@
 
 <h3 align="center">Desktop</h3>
 <h2 align="center">
-    <img height="375" alt="Challenge 01 - ReactJS 2022" src="images/banner.jpg">
+    <img alt="Challenge 01 - ReactJS 2022" src="images/banner.jpg">
 </h2>
 
 <h3 align="center">Mobile</h3>
 <h2 align="center">
-    <img height="375" alt="Challenge 01 - ReactJS 2022" src="images/banner2.jpg">
+    <img alt="Challenge 01 - ReactJS 2022" src="images/banner2.jpg">
 </h2>
 
 
